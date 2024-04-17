@@ -1,5 +1,5 @@
 {
-    "name": "alexpolosmak/plata-by-mono-api-sdk-laravel",
+    "name": "dotsplatform/plata-by-mono-api-sdk-laravel",
     "description": "Laravel sdk for the integration with Plata by Mono service",
     "type": "library",
     "license": "MIT",
