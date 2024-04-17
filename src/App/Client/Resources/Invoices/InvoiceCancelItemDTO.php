@@ -5,25 +5,29 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Resources\Invoices;
+namespace Dots\PlataByMono\App\Client\Resources\Invoices;
 
-
-use Dots\App\Client\Resources\Consts\CancelInvoiceStatus;
-use Dots\App\Client\Resources\Consts\CurrencyCode;
-use Dots\App\Client\Resources\PlataByMonoDateTime;
 use Dots\Data\DTO;
+use Dots\PlataByMono\App\Client\Resources\Consts\CancelInvoiceStatus;
+use Dots\PlataByMono\App\Client\Resources\Consts\CurrencyCode;
+use Dots\PlataByMono\App\Client\Resources\PlataByMonoDateTime;
 
 class InvoiceCancelItemDTO extends DTO
 {
     protected CancelInvoiceStatus $status;
+
     protected int $amount;
+
     protected CurrencyCode $ccy;
 
     protected PlataByMonoDateTime $createdDate;
+
     protected PlataByMonoDateTime $modifiedDate;
 
     protected string $approvalCode;
+
     protected string $rrn;
+
     protected string $extRef;
 
     public function getStatus(): CancelInvoiceStatus

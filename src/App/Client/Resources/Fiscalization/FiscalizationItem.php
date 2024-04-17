@@ -5,20 +5,26 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Resources\Fiscalization;
-
+namespace Dots\PlataByMono\App\Client\Resources\Fiscalization;
 
 use Dots\Data\DTO;
 
 class FiscalizationItem extends DTO
 {
     protected string $name;
+
     protected int $qty;
+
     protected int $sum;
+
     protected string $code;
+
     protected ?string $barcode;
+
     protected ?string $header;
+
     protected ?array $tax;
+
     protected ?string $uktzed;
 
     public function getName(): string

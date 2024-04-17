@@ -5,23 +5,22 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client;
+namespace Dots\PlataByMono\App\Client;
 
-
-use Dots\App\Client\Auth\DTO\PlataByModeAuthDTO;
-use Dots\App\Client\Auth\PlataByMonoAuthenticator;
-use Dots\App\Client\Exceptions\PlataByMonoException;
-use Dots\App\Client\Requests\Invoices\CancelInvoiceRequest;
-use Dots\App\Client\Requests\Invoices\CreateInvoiceRequest;
-use Dots\App\Client\Requests\Invoices\DTO\CancelInvoiceDTO;
-use Dots\App\Client\Requests\Invoices\DTO\CreateInvoiceDTO;
-use Dots\App\Client\Requests\Invoices\DTO\FinalizeInvoiceDTO;
-use Dots\App\Client\Requests\Invoices\FinalizeInvoiceRequest;
-use Dots\App\Client\Requests\Invoices\InvoiceStatusRequest;
-use Dots\App\Client\Responses\CancelInvoiceResponseDTO;
-use Dots\App\Client\Responses\CreateInvoiceResponseDTO;
-use Dots\App\Client\Responses\ErrorResponseDTO;
-use Dots\App\Client\Responses\InvoiceStatusResponseDTO;
+use Dots\PlataByMono\App\Client\Auth\DTO\PlataByModeAuthDTO;
+use Dots\PlataByMono\App\Client\Auth\PlataByMonoAuthenticator;
+use Dots\PlataByMono\App\Client\Exceptions\PlataByMonoException;
+use Dots\PlataByMono\App\Client\Requests\Invoices\CancelInvoiceRequest;
+use Dots\PlataByMono\App\Client\Requests\Invoices\CreateInvoiceRequest;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CancelInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CreateInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\FinalizeInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\Invoices\FinalizeInvoiceRequest;
+use Dots\PlataByMono\App\Client\Requests\Invoices\InvoiceStatusRequest;
+use Dots\PlataByMono\App\Client\Responses\ErrorResponseDTO;
+use Dots\PlataByMono\App\Client\Responses\Invoices\CancelInvoiceResponseDTO;
+use Dots\PlataByMono\App\Client\Responses\Invoices\CreateInvoiceResponseDTO;
+use Dots\PlataByMono\App\Client\Responses\Invoices\InvoiceStatusResponseDTO;
 use Saloon\Http\Connector;
 use Saloon\Http\Response;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
@@ -56,7 +55,7 @@ class PlataByMonoConnector extends Connector
     {
         $this->authenticateRequests();
 
-         $this->send(new FinalizeInvoiceRequest($dto));
+        $this->send(new FinalizeInvoiceRequest($dto));
     }
 
     public function cancelInvoice(CancelInvoiceDTO $dto): CancelInvoiceResponseDTO

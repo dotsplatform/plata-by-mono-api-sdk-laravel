@@ -5,18 +5,21 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Resources;
+namespace Dots\PlataByMono\App\Client\Resources;
 
-
-use Dots\App\Client\Resources\Fiscalization\FiscalizationItems;
 use Dots\Data\DTO;
+use Dots\PlataByMono\App\Client\Resources\Fiscalization\FiscalizationItems;
 
 class MerchantPaymInfo extends DTO
 {
     protected string $reference;
+
     protected string $destination;
+
     protected string $comment;
+
     protected array $customerEmails = [];
+
     protected ?FiscalizationItems $basketOrder;
 
     public function getReference(): string

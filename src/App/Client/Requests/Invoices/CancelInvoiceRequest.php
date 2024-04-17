@@ -5,12 +5,11 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests\Invoices;
+namespace Dots\PlataByMono\App\Client\Requests\Invoices;
 
-
-use Dots\App\Client\Requests\Invoices\DTO\CancelInvoiceDTO;
-use Dots\App\Client\Requests\PostPlataByMonoRequest;
-use Dots\App\Client\Responses\CancelInvoiceResponseDTO;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CancelInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\PostPlataByMonoRequest;
+use Dots\PlataByMono\App\Client\Responses\Invoices\CancelInvoiceResponseDTO;
 use Saloon\Http\Response;
 
 class CancelInvoiceRequest extends PostPlataByMonoRequest

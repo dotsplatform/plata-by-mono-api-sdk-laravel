@@ -1,6 +1,6 @@
 {
-    "name": "alexpolosmak/plate-by-mono-api-sdk-laravel",
-    "description": "Laravel sdk for the integration with Plate by Mono service",
+    "name": "alexpolosmak/plata-by-mono-api-sdk-laravel",
+    "description": "Laravel sdk for the integration with Plata by Mono service",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dots\\": "src/"
+            "Dots\\PlataByMono\\": "src/"
         }
     },
     "autoload-dev": {

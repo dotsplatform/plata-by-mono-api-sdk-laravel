@@ -5,8 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Resources\Invoices;
-
+namespace Dots\PlataByMono\App\Client\Resources\Invoices;
 
 enum InvoiceStatus: string
 {

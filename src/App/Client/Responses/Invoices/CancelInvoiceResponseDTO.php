@@ -5,16 +5,18 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Responses;
+namespace Dots\PlataByMono\App\Client\Responses\Invoices;
 
-
-use Dots\App\Client\Resources\Consts\CancelInvoiceStatus;
-use Dots\App\Client\Resources\PlataByMonoDateTime;
+use Dots\PlataByMono\App\Client\Resources\Consts\CancelInvoiceStatus;
+use Dots\PlataByMono\App\Client\Resources\PlataByMonoDateTime;
+use Dots\PlataByMono\App\Client\Responses\PlataByMonoResponseDTO;
 
 class CancelInvoiceResponseDTO extends PlataByMonoResponseDTO
 {
     protected CancelInvoiceStatus $status;
+
     protected PlataByMonoDateTime $createdDate;
+
     protected PlataByMonoDateTime $modifiedDate;
 
     public function getStatus(): CancelInvoiceStatus
@@ -31,5 +33,4 @@ class CancelInvoiceResponseDTO extends PlataByMonoResponseDTO
     {
         return $this->modifiedDate;
     }
-
 }

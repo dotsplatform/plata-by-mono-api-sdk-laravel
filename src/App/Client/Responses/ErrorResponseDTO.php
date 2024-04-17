@@ -5,8 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Responses;
-
+namespace Dots\PlataByMono\App\Client\Responses;
 
 class ErrorResponseDTO extends PlataByMonoResponseDTO
 {

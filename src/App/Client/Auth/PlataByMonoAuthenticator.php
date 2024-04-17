@@ -5,10 +5,9 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Auth;
+namespace Dots\PlataByMono\App\Client\Auth;
 
-
-use Dots\App\Client\Auth\DTO\PlataByModeAuthDTO;
+use Dots\PlataByMono\App\Client\Auth\DTO\PlataByModeAuthDTO;
 use Saloon\Http\Auth\HeaderAuthenticator;
 
 class PlataByMonoAuthenticator extends HeaderAuthenticator

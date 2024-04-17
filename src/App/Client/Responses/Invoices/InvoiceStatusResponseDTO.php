@@ -5,31 +5,44 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Responses;
+namespace Dots\PlataByMono\App\Client\Responses\Invoices;
 
-
-use Dots\App\Client\Resources\Consts\CurrencyCode;
-use Dots\App\Client\Resources\Invoices\InvoiceCancelList;
-use Dots\App\Client\Resources\Invoices\InvoicePaymentInfo;
-use Dots\App\Client\Resources\Invoices\InvoiceStatus;
-use Dots\App\Client\Resources\PlataByMonoDateTime;
-use Dots\App\Client\Resources\WalletData;
+use Dots\PlataByMono\App\Client\Resources\Consts\CurrencyCode;
+use Dots\PlataByMono\App\Client\Resources\Invoices\InvoiceCancelList;
+use Dots\PlataByMono\App\Client\Resources\Invoices\InvoicePaymentInfo;
+use Dots\PlataByMono\App\Client\Resources\Invoices\InvoiceStatus;
+use Dots\PlataByMono\App\Client\Resources\PlataByMonoDateTime;
+use Dots\PlataByMono\App\Client\Resources\WalletData;
+use Dots\PlataByMono\App\Client\Responses\PlataByMonoResponseDTO;
 
 class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
 {
     protected string $invoiceId;
+
     protected InvoiceStatus $status;
+
     protected ?string $failureReason;
+
     protected ?int $errCode;
+
     protected int $amount;
+
     protected CurrencyCode $ccy;
+
     protected int $finalAmount;
+
     protected PlataByMonoDateTime $createdDate;
+
     protected PlataByMonoDateTime $modifiedDate;
+
     protected string $reference;
+
     protected string $destination;
+
     protected InvoiceCancelList $cancelList;
+
     protected InvoicePaymentInfo $paymentInfo;
+
     protected WalletData $walletData;
 
     public function getInvoiceId(): string

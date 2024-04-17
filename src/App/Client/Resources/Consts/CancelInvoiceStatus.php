@@ -5,8 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Resources\Consts;
-
+namespace Dots\PlataByMono\App\Client\Resources\Consts;
 
 enum CancelInvoiceStatus: string
 {

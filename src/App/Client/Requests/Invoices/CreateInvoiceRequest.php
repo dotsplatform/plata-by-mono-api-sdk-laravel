@@ -5,12 +5,11 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests\Invoices;
+namespace Dots\PlataByMono\App\Client\Requests\Invoices;
 
-
-use Dots\App\Client\Requests\Invoices\DTO\CreateInvoiceDTO;
-use Dots\App\Client\Requests\PostPlataByMonoRequest;
-use Dots\App\Client\Responses\CreateInvoiceResponseDTO;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CreateInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\PostPlataByMonoRequest;
+use Dots\PlataByMono\App\Client\Responses\Invoices\CreateInvoiceResponseDTO;
 use Saloon\Http\Response;
 
 class CreateInvoiceRequest extends PostPlataByMonoRequest

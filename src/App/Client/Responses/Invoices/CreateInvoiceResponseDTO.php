@@ -5,11 +5,14 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Responses;
+namespace Dots\PlataByMono\App\Client\Responses\Invoices;
+
+use Dots\PlataByMono\App\Client\Responses\PlataByMonoResponseDTO;
 
 class CreateInvoiceResponseDTO extends PlataByMonoResponseDTO
 {
     protected string $invoiceId;
+
     protected string $pageUrl;
 
     public function getInvoiceId(): string

@@ -5,7 +5,7 @@
  * @author    Yehor Herasymchuk <yehor@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests;
+namespace Dots\PlataByMono\App\Client\Requests;
 
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;

@@ -5,16 +5,17 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests\Invoices\DTO;
+namespace Dots\PlataByMono\App\Client\Requests\Invoices\DTO;
 
-
-use Dots\App\Client\Resources\Fiscalization\FiscalizationItems;
 use Dots\Data\DTO;
+use Dots\PlataByMono\App\Client\Resources\Fiscalization\FiscalizationItems;
 
 class FinalizeInvoiceDTO extends DTO
 {
     protected string $invoiceId;
+
     protected int $amount;
+
     protected ?FiscalizationItems $items;
 
     public function getInvoiceId(): string

@@ -5,11 +5,10 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests\Invoices;
+namespace Dots\PlataByMono\App\Client\Requests\Invoices;
 
-
-use Dots\App\Client\Requests\BasePlataByMonoRequest;
-use Dots\App\Client\Responses\InvoiceStatusResponseDTO;
+use Dots\PlataByMono\App\Client\Requests\BasePlataByMonoRequest;
+use Dots\PlataByMono\App\Client\Responses\Invoices\InvoiceStatusResponseDTO;
 use Saloon\Http\Response;
 
 class InvoiceStatusRequest extends BasePlataByMonoRequest
@@ -30,5 +29,4 @@ class InvoiceStatusRequest extends BasePlataByMonoRequest
     {
         return InvoiceStatusResponseDTO::fromResponse($response);
     }
-
 }

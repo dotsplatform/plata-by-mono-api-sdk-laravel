@@ -5,10 +5,9 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Exceptions;
+namespace Dots\PlataByMono\App\Client\Exceptions;
 
-
-use Dots\App\Client\Responses\ErrorResponseDTO;
+use Dots\PlataByMono\App\Client\Responses\ErrorResponseDTO;
 use Exception;
 use Throwable;
 

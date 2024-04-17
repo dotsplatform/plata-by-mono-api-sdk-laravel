@@ -3,3 +3,5 @@ testbench.yaml
 .php-cs-fixer.cache
 .idea
 .phpunit.cache
+/storage/logs/*
+```

@@ -5,26 +5,34 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests\Invoices\DTO;
+namespace Dots\PlataByMono\App\Client\Requests\Invoices\DTO;
 
-
-use Dots\App\Client\Resources\Consts\CurrencyCode;
-use Dots\App\Client\Resources\Consts\PaymentType;
-use Dots\App\Client\Resources\MerchantPaymInfo;
-use Dots\App\Client\Resources\SaveCardDataDTO;
 use Dots\Data\DTO;
+use Dots\PlataByMono\App\Client\Resources\Consts\CurrencyCode;
+use Dots\PlataByMono\App\Client\Resources\Consts\PaymentType;
+use Dots\PlataByMono\App\Client\Resources\MerchantPaymInfo;
+use Dots\PlataByMono\App\Client\Resources\SaveCardDataDTO;
 
 class CreateInvoiceDTO extends DTO
 {
     protected int $amount;
+
     protected CurrencyCode $ccy;
+
     protected MerchantPaymInfo $merchantPaymInfo;
+
     protected string $redirectUrl;
+
     protected string $webHookUrl;
+
     protected ?int $validity;
+
     protected PaymentType $paymentType;
+
     protected ?string $qrId;
+
     protected ?string $code;
+
     protected ?SaveCardDataDTO $saveCardData;
 
     public function getAmount(): int

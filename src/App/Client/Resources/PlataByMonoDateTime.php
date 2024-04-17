@@ -5,8 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Resources;
-
+namespace Dots\PlataByMono\App\Client\Resources;
 
 use DateTime;
 use Dots\Data\DTO;

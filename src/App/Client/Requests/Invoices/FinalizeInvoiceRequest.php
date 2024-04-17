@@ -5,11 +5,10 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Requests\Invoices;
+namespace Dots\PlataByMono\App\Client\Requests\Invoices;
 
-
-use Dots\App\Client\Requests\Invoices\DTO\FinalizeInvoiceDTO;
-use Dots\App\Client\Requests\PostPlataByMonoRequest;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\FinalizeInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\PostPlataByMonoRequest;
 
 class FinalizeInvoiceRequest extends PostPlataByMonoRequest
 {

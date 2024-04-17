@@ -5,8 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Dots\App\Client\Auth\DTO;
-
+namespace Dots\PlataByMono\App\Client\Auth\DTO;
 
 use Dots\Data\DTO;
 
@@ -18,5 +17,4 @@ class PlataByModeAuthDTO extends DTO
     {
         return $this->accessToken;
     }
-
 }
