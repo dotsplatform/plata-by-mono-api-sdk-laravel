@@ -37,6 +37,9 @@ class PlataByMonoConnector extends Connector
     ) {
     }
 
+    /**
+     * @throws PlataByMonoException
+     */
     public function createInvoice(CreateInvoiceDTO $dto): CreateInvoiceResponseDTO
     {
         $this->authenticateRequests();
@@ -44,6 +47,9 @@ class PlataByMonoConnector extends Connector
         return $this->send(new CreateInvoiceRequest($dto))->dto();
     }
 
+    /**
+     * @throws PlataByMonoException
+     */
     public function invoiceStatus(string $invoiceId): InvoiceStatusResponseDTO
     {
         $this->authenticateRequests();
@@ -51,6 +57,9 @@ class PlataByMonoConnector extends Connector
         return $this->send(new InvoiceStatusRequest($invoiceId))->dto();
     }
 
+    /**
+     * @throws PlataByMonoException
+     */
     public function finalizeInvoice(FinalizeInvoiceDTO $dto): void
     {
         $this->authenticateRequests();
@@ -58,6 +67,9 @@ class PlataByMonoConnector extends Connector
         $this->send(new FinalizeInvoiceRequest($dto));
     }
 
+    /**
+     * @throws PlataByMonoException
+     */
     public function cancelInvoice(CancelInvoiceDTO $dto): CancelInvoiceResponseDTO
     {
         $this->authenticateRequests();
