@@ -33,4 +33,9 @@ class CancelInvoiceResponseDTO extends PlataByMonoResponseDTO
     {
         return $this->modifiedDate;
     }
+
+    public function isSuccess(): bool
+    {
+        return $this->status !== CancelInvoiceStatus::FAILURE;
+    }
 }
