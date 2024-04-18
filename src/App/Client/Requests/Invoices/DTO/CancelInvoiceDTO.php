@@ -14,7 +14,7 @@ class CancelInvoiceDTO extends DTO
 {
     protected string $invoiceId;
 
-    protected string $extRef;
+    protected ?string $extRef;
 
     protected int $amount; // used for partial refund
 
@@ -25,7 +25,7 @@ class CancelInvoiceDTO extends DTO
         return $this->invoiceId;
     }
 
-    public function getExtRef(): string
+    public function getExtRef(): ?string
     {
         return $this->extRef;
     }
