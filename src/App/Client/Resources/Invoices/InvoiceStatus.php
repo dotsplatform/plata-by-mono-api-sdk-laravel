@@ -16,4 +16,24 @@ enum InvoiceStatus: string
     case FAILURE = 'failure';
     case REVERSED = 'reversed';
     case EXPIRED = 'expired';
+
+    public function isExpired(): bool
+    {
+        return $this === self::EXPIRED;
+    }
+
+    public function isOnHold(): bool
+    {
+        return $this === self::HOLD;
+    }
+
+    public function isCaptured(): bool
+    {
+        return $this === self::SUCCESS;
+    }
+
+    public function isFailed(): bool
+    {
+        return $this === self::FAILURE || $this === self::REVERSED;
+    }
 }

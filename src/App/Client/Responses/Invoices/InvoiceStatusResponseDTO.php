@@ -114,4 +114,28 @@ class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
     {
         return $this->walletData;
     }
+
+    public function isExpired(): bool
+    {
+        return $this->status->isExpired();
+    }
+
+    public function isOnHold(): bool
+    {
+        return $this->status->isOnHold();
+    }
+
+    public function isCaptured(): bool
+    {
+        return $this->status->isCaptured();
+    }
+
+    public function isFailed(): bool
+    {
+        if ($this->status->isFailed()) {
+            return true;
+        }
+
+        return ! empty($this->getErrCode()) || ! empty($this->getFailureReason());
+    }
 }
