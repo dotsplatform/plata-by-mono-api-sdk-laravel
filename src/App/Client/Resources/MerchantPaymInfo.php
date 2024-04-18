@@ -16,9 +16,9 @@ class MerchantPaymInfo extends DTO
 
     protected string $destination;
 
-    protected string $comment;
+    protected ?string $comment;
 
-    protected array $customerEmails = [];
+    protected ?array $customerEmails;
 
     protected ?FiscalizationItems $basketOrder;
 
@@ -32,12 +32,12 @@ class MerchantPaymInfo extends DTO
         return $this->destination;
     }
 
-    public function getComment(): string
+    public function getComment(): ?string
     {
         return $this->comment;
     }
 
-    public function getCustomerEmails(): array
+    public function getCustomerEmails(): ?array
     {
         return $this->customerEmails;
     }
