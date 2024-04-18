@@ -12,12 +12,11 @@ use Saloon\Http\Auth\HeaderAuthenticator;
 
 class PlataByMonoAuthenticator extends HeaderAuthenticator
 {
-    public string $headerName = 'X-Token';
-
     public static function fromAuthDTO(PlataByModeAuthDTO $dto): static
     {
         return new static(
             accessToken: $dto->getAccessToken(),
+            headerName: 'X-Token',
         );
     }
 }
