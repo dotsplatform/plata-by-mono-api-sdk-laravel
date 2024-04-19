@@ -7,6 +7,7 @@
 
 namespace Dots\PlataByMono\Mocks\Invoices;
 
+use Dots\PlataByMono\App\Client\Requests\Invoices\CancelInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\CreateInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\FinalizeInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\InvoiceStatusRequest;
@@ -95,7 +96,7 @@ class InvoicesResponseMocker
     {
         $data = InvoicesResponseDemoDataGenerator::generateFailCancelInvoice($data);
         MockClient::global([
-            CreateInvoiceRequest::class => MockResponse::make($data),
+            CancelInvoiceRequest::class => MockResponse::make($data),
         ]);
 
         return $data;
@@ -105,7 +106,7 @@ class InvoicesResponseMocker
     {
         $data = InvoicesResponseDemoDataGenerator::generateSuccessCancelInvoice($data);
         MockClient::global([
-            CreateInvoiceRequest::class => MockResponse::make($data, 400),
+            CancelInvoiceRequest::class => MockResponse::make($data, 400),
         ]);
 
         return $data;
