@@ -11,7 +11,7 @@ use Dots\Data\DTO;
 
 class InvoicePaymentInfo extends DTO
 {
-    protected string $maskedPan;
+    protected ?string $maskedPan;
 
     protected string $approvalCode;
 
@@ -31,7 +31,7 @@ class InvoicePaymentInfo extends DTO
 
     protected string $country;
 
-    public function getMaskedPan(): string
+    public function getMaskedPan(): ?string
     {
         return $this->maskedPan;
     }
