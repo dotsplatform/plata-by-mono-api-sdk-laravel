@@ -45,7 +45,7 @@ class InvoicesResponseMocker
     {
         $data = InvoicesResponseDemoDataGenerator::generateFailCreateInvoice($data);
         MockClient::global([
-            CreateInvoiceRequest::class => MockResponse::make($data),
+            CreateInvoiceRequest::class => MockResponse::make($data, 400),
         ]);
 
         return $data;
@@ -65,7 +65,7 @@ class InvoicesResponseMocker
     {
         $data = InvoicesResponseDemoDataGenerator::generateFailInvoiceStatus($data);
         MockClient::global([
-            InvoiceStatusRequest::class => MockResponse::make($data),
+            InvoiceStatusRequest::class => MockResponse::make($data, 400),
         ]);
 
         return $data;
@@ -85,7 +85,7 @@ class InvoicesResponseMocker
     {
         $data = InvoicesResponseDemoDataGenerator::generateFailFinalizeInvoice($data);
         MockClient::global([
-            FinalizeInvoiceRequest::class => MockResponse::make($data),
+            FinalizeInvoiceRequest::class => MockResponse::make($data, 400),
         ]);
 
         return $data;
@@ -105,7 +105,7 @@ class InvoicesResponseMocker
     {
         $data = InvoicesResponseDemoDataGenerator::generateSuccessCancelInvoice($data);
         MockClient::global([
-            CreateInvoiceRequest::class => MockResponse::make($data),
+            CreateInvoiceRequest::class => MockResponse::make($data, 400),
         ]);
 
         return $data;
