@@ -56,7 +56,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-             'errText' => 'Something went wrong',
+            'errText' => 'Something went wrong',
         ], $data);
     }
 
@@ -73,7 +73,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-             'errText' => 'Something went wrong',
+            'errText' => 'Something went wrong',
         ], $data);
     }
 
@@ -88,7 +88,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-             'errText' => 'Something went wrong',
+            'errText' => 'Something went wrong',
         ], $data);
     }
 }
