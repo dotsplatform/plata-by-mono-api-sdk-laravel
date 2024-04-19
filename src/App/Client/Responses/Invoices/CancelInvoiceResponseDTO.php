@@ -35,7 +35,7 @@ class CancelInvoiceResponseDTO extends PlataByMonoResponseDTO
 
         return $data;
     }
-    
+
     public function getStatus(): CancelInvoiceStatus
     {
         return $this->status;

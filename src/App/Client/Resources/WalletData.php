@@ -16,4 +16,19 @@ class WalletData extends DTO
     protected string $walletId;
 
     protected string $status;
+
+    public function getCardToken(): string
+    {
+        return $this->cardToken;
+    }
+
+    public function getWalletId(): string
+    {
+        return $this->walletId;
+    }
+
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
 }

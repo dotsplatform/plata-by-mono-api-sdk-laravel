@@ -8,9 +8,9 @@
 namespace Dots\PlataByMono\App\Client\Responses\Invoices;
 
 use Dots\PlataByMono\App\Client\Resources\Consts\CurrencyCode;
+use Dots\PlataByMono\App\Client\Resources\Consts\InvoiceStatus;
 use Dots\PlataByMono\App\Client\Resources\Invoices\InvoiceCancelList;
 use Dots\PlataByMono\App\Client\Resources\Invoices\InvoicePaymentInfo;
-use Dots\PlataByMono\App\Client\Resources\Invoices\InvoiceStatus;
 use Dots\PlataByMono\App\Client\Resources\PlataByMonoDateTime;
 use Dots\PlataByMono\App\Client\Resources\WalletData;
 use Dots\PlataByMono\App\Client\Responses\PlataByMonoResponseDTO;
