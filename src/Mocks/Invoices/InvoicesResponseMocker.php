@@ -7,7 +7,6 @@
 
 namespace Dots\PlataByMono\Mocks\Invoices;
 
-
 use Dots\PlataByMono\App\Client\Requests\Invoices\CreateInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\FinalizeInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\InvoiceStatusRequest;
