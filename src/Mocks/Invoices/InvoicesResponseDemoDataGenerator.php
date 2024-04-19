@@ -7,14 +7,12 @@
 
 namespace Dots\PlataByMono\Mocks\Invoices;
 
-use Ramsey\Uuid\Uuid;
-
 class InvoicesResponseDemoDataGenerator
 {
     public static function generateSuccessCreateInvoice(array $data = []): array
     {
         return array_merge([
-            'invoiceId' => Uuid::uuid7()->toString(),
+            'invoiceId' => '240418AaqQanruPSM7Qj',
             'pageUrl' => 'https://example.com',
         ], $data);
     }
@@ -23,7 +21,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-            'errText' => Uuid::uuid7()->toString(),
+            'errText' => 'Something went wrong',
         ], $data);
     }
 
@@ -58,7 +56,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-            'errText' => Uuid::uuid7()->toString(),
+             'errText' => 'Something went wrong',
         ], $data);
     }
 
@@ -75,7 +73,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-            'errText' => Uuid::uuid7()->toString(),
+             'errText' => 'Something went wrong',
         ], $data);
     }
 
@@ -90,7 +88,7 @@ class InvoicesResponseDemoDataGenerator
     {
         return array_merge([
             'errCode' => 1001,
-            'errText' => Uuid::uuid7()->toString(),
+             'errText' => 'Something went wrong',
         ], $data);
     }
 }
