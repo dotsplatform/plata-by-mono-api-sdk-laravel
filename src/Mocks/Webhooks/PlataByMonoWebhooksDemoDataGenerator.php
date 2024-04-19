@@ -5,7 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Mocks\Webhooks;
+namespace Dots\PlataByMono\Mocks\Webhooks;
 
 class PlataByMonoWebhooksDemoDataGenerator
 {

@@ -5,7 +5,7 @@
  * @author    Oleksandr Polosmak <o.polosmak@dotsplatform.com>
  */
 
-namespace Mocks\Invoices;
+namespace Dots\PlataByMono\Mocks\Invoices;
 
 
 use Dots\PlataByMono\App\Client\Requests\Invoices\CreateInvoiceRequest;
