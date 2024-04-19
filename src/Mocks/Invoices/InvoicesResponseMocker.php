@@ -94,7 +94,7 @@ class InvoicesResponseMocker
 
     public static function mockSuccessCancelInvoice(array $data = []): array
     {
-        $data = InvoicesResponseDemoDataGenerator::generateFailCancelInvoice($data);
+        $data = InvoicesResponseDemoDataGenerator::generateSuccessCancelInvoice($data);
         MockClient::global([
             CancelInvoiceRequest::class => MockResponse::make($data),
         ]);
@@ -104,7 +104,7 @@ class InvoicesResponseMocker
 
     public static function mockFailCancelInvoice(array $data = []): array
     {
-        $data = InvoicesResponseDemoDataGenerator::generateSuccessCancelInvoice($data);
+        $data = InvoicesResponseDemoDataGenerator::generateFailCancelInvoice($data);
         MockClient::global([
             CancelInvoiceRequest::class => MockResponse::make($data, 400),
         ]);
