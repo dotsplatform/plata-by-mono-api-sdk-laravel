@@ -15,6 +15,12 @@ use Dots\PlataByMono\App\Client\Resources\PlataByMonoDateTime;
 use Dots\PlataByMono\App\Client\Resources\WalletData;
 use Dots\PlataByMono\App\Client\Responses\PlataByMonoResponseDTO;
 
+/**
+ * @note This class used for the payment status and webhooks
+ * Remember, a webhook can do not have any field, for example, the webhooks
+ * with status Created does not have finalAmount, when status is Success
+ * the webhook data is same that response from the payment status request
+ */
 class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
 {
     protected string $invoiceId;
@@ -29,7 +35,7 @@ class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
 
     protected CurrencyCode $ccy;
 
-    protected int $finalAmount;
+    protected int $finalAmount = 0;
 
     protected PlataByMonoDateTime $createdDate;
 
@@ -39,11 +45,11 @@ class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
 
     protected string $destination;
 
-    protected InvoiceCancelList $cancelList;
+    protected ?InvoiceCancelList $cancelList;
 
-    protected InvoicePaymentInfo $paymentInfo;
+    protected ?InvoicePaymentInfo $paymentInfo;
 
-    protected WalletData $walletData;
+    protected ?WalletData $walletData;
 
     public static function fromArray(array $data): static
     {
@@ -117,17 +123,17 @@ class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
         return $this->destination;
     }
 
-    public function getCancelList(): InvoiceCancelList
+    public function getCancelList(): ?InvoiceCancelList
     {
         return $this->cancelList;
     }
 
-    public function getPaymentInfo(): InvoicePaymentInfo
+    public function getPaymentInfo(): ?InvoicePaymentInfo
     {
         return $this->paymentInfo;
     }
 
-    public function getWalletData(): WalletData
+    public function getWalletData(): ?WalletData
     {
         return $this->walletData;
     }
