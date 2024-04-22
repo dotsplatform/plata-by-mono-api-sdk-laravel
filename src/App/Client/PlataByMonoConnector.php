@@ -21,6 +21,7 @@ use Dots\PlataByMono\App\Client\Responses\ErrorResponseDTO;
 use Dots\PlataByMono\App\Client\Responses\Invoices\CancelInvoiceResponseDTO;
 use Dots\PlataByMono\App\Client\Responses\Invoices\CreateInvoiceResponseDTO;
 use Dots\PlataByMono\App\Client\Responses\Invoices\InvoiceStatusResponseDTO;
+use RuntimeException;
 use Saloon\Http\Connector;
 use Saloon\Http\Response;
 use Saloon\Traits\Plugins\AlwaysThrowOnErrors;
@@ -29,8 +30,6 @@ use Throwable;
 class PlataByMonoConnector extends Connector
 {
     use AlwaysThrowOnErrors;
-
-    private const HOST = 'https://api.monobank.ua';
 
     public function __construct(
         private readonly PlataByModeAuthDTO $authDto,
@@ -87,7 +86,12 @@ class PlataByMonoConnector extends Connector
 
     public function resolveBaseUrl(): string
     {
-        return self::HOST;
+        $host = config('plata-by-mono.host');
+        if (! is_string($host)) {
+            throw new RuntimeException('Invalid Plata by Mono host');
+        }
+
+        return $host;
     }
 
     private function authenticateRequests(): void
