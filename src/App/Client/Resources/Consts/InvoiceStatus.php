@@ -34,6 +34,6 @@ enum InvoiceStatus: string
 
     public function isFailed(): bool
     {
-        return $this === self::FAILURE || $this === self::REVERSED;
+        return $this === self::FAILURE || $this === self::EXPIRED;
     }
 }
