@@ -24,11 +24,11 @@ class InvoiceCancelItemDTO extends DTO
 
     protected PlataByMonoDateTime $modifiedDate;
 
-    protected string $approvalCode;
+    protected ?string $approvalCode;
 
-    protected string $rrn;
+    protected ?string $rrn;
 
-    protected string $extRef;
+    protected ?string $extRef;
 
     public static function fromArray(array $data): static
     {
@@ -72,17 +72,17 @@ class InvoiceCancelItemDTO extends DTO
         return $this->modifiedDate;
     }
 
-    public function getApprovalCode(): string
+    public function getApprovalCode(): ?string
     {
         return $this->approvalCode;
     }
 
-    public function getRrn(): string
+    public function getRrn(): ?string
     {
         return $this->rrn;
     }
 
-    public function getExtRef(): string
+    public function getExtRef(): ?string
     {
         return $this->extRef;
     }
