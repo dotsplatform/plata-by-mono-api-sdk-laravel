@@ -78,10 +78,16 @@ class PlataByMonoConnector extends Connector
 
     protected function defaultHeaders(): array
     {
-        return [
+        $headers = [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
         ];
+
+        if (config('plata-by-mono.cmsName')) {
+            $headers['X-Cms'] = config('plata-by-mono.cmsName');
+        }
+
+        return $headers;
     }
 
     public function resolveBaseUrl(): string
