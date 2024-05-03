@@ -20,6 +20,13 @@ class InvoiceStatusRequest extends BasePlataByMonoRequest
     ) {
     }
 
+    protected function defaultQuery(): array
+    {
+        return [
+            'invoiceId' => $this->invoiceId,
+        ];
+    }
+
     public function resolveEndpoint(): string
     {
         return self::ENDPOINT;
