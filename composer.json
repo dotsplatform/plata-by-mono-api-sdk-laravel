@@ -13,7 +13,8 @@
         "php": "^8.2",
         "dotsplatform/utils": "^2.0",
         "saloonphp/saloon": "^3.5",
-        "illuminate/support": "^10.2"
+        "illuminate/support": "^10.2",
+        "saloonphp/laravel-plugin": "^3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.5",
