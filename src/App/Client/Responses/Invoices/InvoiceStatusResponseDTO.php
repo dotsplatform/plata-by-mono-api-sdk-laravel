@@ -161,4 +161,9 @@ class InvoiceStatusResponseDTO extends PlataByMonoResponseDTO
 
         return ! empty($this->getErrCode()) || ! empty($this->getFailureReason());
     }
+
+    public function isProcessing(): bool
+    {
+        return $this->status->isProcessing();
+    }
 }

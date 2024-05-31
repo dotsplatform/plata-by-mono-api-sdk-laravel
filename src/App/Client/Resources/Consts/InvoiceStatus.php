@@ -32,6 +32,11 @@ enum InvoiceStatus: string
         return $this === self::SUCCESS;
     }
 
+    public function isProcessing(): bool
+    {
+        return $this === self::PROCESSING;
+    }
+
     public function isFailed(): bool
     {
         return $this === self::FAILURE || $this === self::EXPIRED;
