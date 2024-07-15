@@ -8,6 +8,7 @@
 namespace Tests\App\Client\Resources\Fiscalization;
 
 use Dots\PlataByMono\App\Client\Resources\Fiscalization\FiscalizationItem;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class FiscalizationItemTest extends TestCase
@@ -31,9 +32,7 @@ class FiscalizationItemTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider fromArrayDataProvider
-     */
+    #[DataProvider('fromArrayDataProvider')]
     public function testFromArray(array $data, array $expectedData): void
     {
         $dto = FiscalizationItem::fromArray($data);

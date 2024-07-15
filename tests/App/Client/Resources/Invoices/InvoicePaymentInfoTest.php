@@ -8,6 +8,7 @@
 namespace Tests\App\Client\Resources\Invoices;
 
 use Dots\PlataByMono\App\Client\Resources\Invoices\InvoicePaymentInfo;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class InvoicePaymentInfoTest extends TestCase
@@ -33,9 +34,7 @@ class InvoicePaymentInfoTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider fromArrayDataProvider
-     */
+    #[DataProvider('fromArrayDataProvider')]
     public function testFromArray(array $data, array $expectedData): void
     {
         $dto = InvoicePaymentInfo::fromArray($data);

@@ -8,6 +8,7 @@
 namespace Tests\App\Client\Responses\Invoices;
 
 use Dots\PlataByMono\App\Client\Responses\Invoices\CreateInvoiceResponseDTO;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class CreateInvoiceResponseDTOTest extends TestCase
@@ -25,9 +26,7 @@ class CreateInvoiceResponseDTOTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider fromArrayDataProvider
-     */
+    #[DataProvider('fromArrayDataProvider')]
     public function testFromArray(array $data, array $expectedData): void
     {
         $dto = CreateInvoiceResponseDTO::fromArray($data);
