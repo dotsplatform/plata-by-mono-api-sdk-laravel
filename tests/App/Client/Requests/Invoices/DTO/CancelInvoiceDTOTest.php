@@ -8,6 +8,7 @@
 namespace Tests\App\Client\Requests\Invoices\DTO;
 
 use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CancelInvoiceDTO;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Tests\TestCase;
 
 class CancelInvoiceDTOTest extends TestCase
@@ -34,9 +35,7 @@ class CancelInvoiceDTOTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider fromArrayDataProvider
-     */
+    #[DataProvider('fromArrayDataProvider')]
     public function testFromArray(
         array $data,
         array $expectedData,
