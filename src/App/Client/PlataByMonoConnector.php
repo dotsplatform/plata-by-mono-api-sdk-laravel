@@ -15,8 +15,10 @@ use Dots\PlataByMono\App\Client\Requests\Invoices\CreateInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CancelInvoiceDTO;
 use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\CreateInvoiceDTO;
 use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\FinalizeInvoiceDTO;
+use Dots\PlataByMono\App\Client\Requests\Invoices\DTO\RemoveInvoiceDTO;
 use Dots\PlataByMono\App\Client\Requests\Invoices\FinalizeInvoiceRequest;
 use Dots\PlataByMono\App\Client\Requests\Invoices\InvoiceStatusRequest;
+use Dots\PlataByMono\App\Client\Requests\Invoices\RemoveInvoiceRequest;
 use Dots\PlataByMono\App\Client\Responses\ErrorResponseDTO;
 use Dots\PlataByMono\App\Client\Responses\Invoices\CancelInvoiceResponseDTO;
 use Dots\PlataByMono\App\Client\Responses\Invoices\CreateInvoiceResponseDTO;
@@ -44,6 +46,16 @@ class PlataByMonoConnector extends Connector
         $this->authenticateRequests();
 
         return $this->send(new CreateInvoiceRequest($dto))->dto();
+    }
+
+    /**
+     * @throws PlataByMonoException
+     */
+    public function removeInvoice(RemoveInvoiceDTO $dto): void
+    {
+        $this->authenticateRequests();
+
+        $this->send(new RemoveInvoiceRequest($dto))->dto();
     }
 
     /**
